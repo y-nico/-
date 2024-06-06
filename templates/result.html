@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>計算結果</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .result-img {
+            margin-top: 20px;
+        }
+        .form-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .form-container form {
+            display: flex;
+            align-items: center;
+        }
+        .form-container label {
+            margin-right: 10px;
+        }
+        .form-container input {
+            width: 50px;
+            text-align: center;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>計算結果</h1>
+        <p>{{ result }}</p>
+        <div class="form-container">
+            <form action="/">
+                <label for="prod_width">出力サイズ</label>
+                幅<input type="text" id="prod_width" name="prod_width" value="{{ prod_width }}" readonly>
+                奥行<input type="text" id="prod_depth" name="prod_depth" value="{{ prod_depth }}" readonly>
+                高さ<input type="text" id="prod_height" name="prod_height" value="{{ prod_height }}" readonly>
+                <button type="submit">サイズ入力に戻る</button>
+            </form>
+        </div>
+        <div class="result-img">
+            {% if image_file %}
+                <img src="{{ url_for('static', filename=image_file) }}" alt="結果画像">
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

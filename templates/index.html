@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>段ボールサイズ計算</title>
+</head>
+<body>
+    <h1>段ボールサイズ計算</h1>
+    <form action="/calculate" method="post">
+        <label>段ボールサイズ:</label><br>
+        <input type="text" name="card_height" placeholder="高さ"><br>
+        <input type="text" name="card_width" placeholder="幅"><br><br>
+        <label>商品サイズ:</label><br>
+        <input type="text" name="prod_width" placeholder="幅"><br>
+        <input type="text" name="prod_depth" placeholder="奥行き"><br>
+        <input type="text" name="prod_height" placeholder="高さ"><br><br>
+        <button type="submit">計算</button>
+    </form>
+</body>
+</html>
