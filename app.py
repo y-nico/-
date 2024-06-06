@@ -85,5 +85,6 @@ def calculate():
     except ValueError:
         return render_template('result.html', result="すべてのフィールドに正しい数値を入力してください。")
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    port = int(os.environ.get('PORT', 8080))
+    app.run(host ='0.0.0.0',port = port)
