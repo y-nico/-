@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: boxcuttingapp
+    env: docker
+    repo: https://github.com/y-nico/-.git
+    branch: main
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "streamlit run app.py"
+    dockerfilePath: ./Dockerfile
