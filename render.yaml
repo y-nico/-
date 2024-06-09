@@ -5,5 +5,5 @@ services:
     repo: https://github.com/y-nico/-.git
     branch: main
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "streamlit run app.py"
+    startCommand: "streamlit run app.py --server.port 8501 --server.enableCORS false"
     dockerfilePath: ./Dockerfile
